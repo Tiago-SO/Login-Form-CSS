@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+:root {
+    --text-base: #afb6c2;
+    --text-title: #d4ccb6;
+    --background: #191816;
+    --form-background: #24221f;
+    --primary-color: #ffc632;
+}
+
+html,
+body {
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+@media only screen and (max-width: 480px) {
+    body {
+        height: 812px;
+
+        display: flex;
+        justify-content: center;
+
+        background: var(--background);
+    }
+
+    .wrap{
+        padding-top: 40px;
+        width: 335px;
+    }
+
+    header {
+        margin-bottom: 30px;
+    }
+
+
+    header .container {
+        margin-bottom: 27px;
+    }
+
+    header figure {
+        margin-bottom: 36px;
+    }
+
+    header div:nth-child(2) {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+        color: var(--text-title);
+    }
+
+    header p {
+        color: var(--text-base);
+    }
+
+    main {
+        display: flex;
+        justify-content: content;
+
+    }
+
+    main .container {
+        margin-bottom: 20px;
+    }
+
+    main form {
+        display: flex;
+        flex-direction: column;
+
+
+        color: var(--text-base);
+    }
+
+    main form label {
+        margin-bottom: 5px;
+    }
+
+    main form input {
+        width: 335px;
+        height: 44px;
+        margin-bottom: 20px;
+
+        background-color: var(--background);
+
+        border: 1px solid #868686;
+        border-radius: 4px;
+    }
+
+
+}
+
+@media (max-width: 800px), (min-width: 1281px) {
+    body {
+     
+    }
+   }
