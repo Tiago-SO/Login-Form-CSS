@@ -26,7 +26,7 @@ body {
         background: var(--background);
     }
 
-    .wrap{
+    .wrap {
         padding-top: 40px;
         width: 335px;
     }
@@ -82,7 +82,7 @@ body {
         height: 44px;
         margin-bottom: 20px;
         padding-left: 37px;
-        
+
         background-color: var(--background);
         color: var(--text-base);
 
@@ -90,19 +90,129 @@ body {
         border-radius: 4px;
     }
 
-    main form input[type=email]{
+    main form input[type=email] {
         background: url(./images/mail.svg) no-repeat left 12px center;
     }
 
-    main form input[type=password]{
+    main form input[type=password] {
         background: url(./images/lock.svg) no-repeat left 12px center;
     }
 
-   
+    main form .line-checkbox {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    main form .line-checkbox p a {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 21px;
+        text-decoration: none;
+
+        color: var(--primary-color);
+    }
+
+    main form .remember {
+        position: relative;
+        padding-left: 30px;
+        padding: auto 0;
+
+    }
+
+    main form .remember input[type=checkbox] {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    main form .checkmark {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 0;
+        left: 0;
+        border: 1px solid #868686;
+        border-radius: 4px;
+    }
+
+    main form .remember input:checked~.checkmark {
+        background-color: var(--primary-color);
+        border: none;
+    }
+
+    .remember .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+        left: 6px;
+        top: 2px;
+        width: 5px;
+        height: 10px;
+        border: solid var(--form-background);
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-trasform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    .remember input:checked~.checkmark:after {
+        content: "";
+        display: block;
+    }
+
+    main form button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 334px;
+        height: 51px;
+        margin-bottom: 15px;
+
+        background: var(--primary-color);
+        border: 0;
+        border-radius: 4px;
+
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+
+        letter-spacing: 0.015em;
+        text-transform: uppercase;
+
+        color: #473404;
+    }
+
+    main form div:last-child p{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        text-align: center;
+        line-height: 21px;
+
+        color: #FFC632;
+    }
+
+    main form div:last-child a {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 21px;
+        text-decoration: none;
+
+        color: #FFC632;
+    }
+
 }
 
-@media (max-width: 800px), (min-width: 1281px) {
-    body {
-     
+@media (min-width: 401px),
+(max-width: 1440px) {
+    .wrap{
+        display: none;
     }
-   }
+}
