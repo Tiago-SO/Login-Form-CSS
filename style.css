@@ -18,7 +18,31 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-@media only screen and (max-width: 480px) {
+@media (min-width: 401px),
+(max-width: 768px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--background);
+
+    }
+
+    .wrap {
+        width: 572px;
+        height: 512px;
+
+        background-color: var(--form-background);
+    }
+
+    .side {
+        display: none;
+    }
+
+
+}
+
+@media  (max-width: 480px) {
     body {
         display: flex;
         justify-content: center;
@@ -29,6 +53,7 @@ body {
     .wrap {
         padding-top: 40px;
         width: 335px;
+        background-color: var(--background);
     }
 
     header {
@@ -186,7 +211,7 @@ body {
         color: #473404;
     }
 
-    main form div:last-child p{
+    main form div:last-child p {
         font-family: 'Poppins';
         font-style: normal;
         font-weight: 400;
@@ -208,11 +233,9 @@ body {
         color: #FFC632;
     }
 
-}
-
-@media (min-width: 401px),
-(max-width: 1440px) {
-    .wrap{
+    .side{
         display: none;
     }
+
 }
+
