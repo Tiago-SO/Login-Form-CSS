@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: content-box;
+    box-sizing: border-box;
 }
 
 :root {
@@ -20,8 +20,6 @@ body {
 
 @media only screen and (max-width: 480px) {
     body {
-        height: 812px;
-
         display: flex;
         justify-content: center;
 
@@ -59,7 +57,7 @@ body {
 
     main {
         display: flex;
-        justify-content: content;
+        justify-content: center;
 
     }
 
@@ -83,14 +81,24 @@ body {
         width: 335px;
         height: 44px;
         margin-bottom: 20px;
-
+        padding-left: 37px;
+        
         background-color: var(--background);
+        color: var(--text-base);
 
         border: 1px solid #868686;
         border-radius: 4px;
     }
 
+    main form input[type=email]{
+        background: url(./images/mail.svg) no-repeat left 12px center;
+    }
 
+    main form input[type=password]{
+        background: url(./images/lock.svg) no-repeat left 12px center;
+    }
+
+   
 }
 
 @media (max-width: 800px), (min-width: 1281px) {
