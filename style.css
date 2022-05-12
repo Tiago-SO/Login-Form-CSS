@@ -18,8 +18,463 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-@media (min-width: 401px),
-(max-width: 768px) {
+input[type=email]:focus {
+    background: url(./images/mail-focus.svg) no-repeat left 12px center;
+    outline: 0;
+    border: 1px solid var(--primary-color);
+
+}
+
+input[type=password]:focus {
+    background: url(./images/lock-focus.svg) no-repeat left 12px center;
+    outline: 0;
+    border: 1px solid var(--primary-color);
+}
+
+@media only screen and (min-width: 1441px) {
+    body{
+
+        background-color: var(--background);
+
+        display: flex;
+        justify-content: center;
+    }
+    
+    .wrap{
+        width: 50vw;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+
+    }
+
+    header {
+        width: 572px;
+
+        display: flex;
+        justify-content: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        background-color: var(--form-background);
+    }
+
+
+    header .container {
+        width: 335px;
+    }
+
+    header figure {
+        top: 40px;
+        left: 40px;
+
+        position: absolute;
+        margin-bottom: 36px;
+    }
+
+    header div:nth-child(2) {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+        color: var(--text-title);
+    }
+
+    header p {
+        color: var(--text-base);
+    }
+
+    main {
+        width: 572px;
+
+        display: flex;
+        justify-content: center;
+        background: var(--form-background);
+
+    }
+
+    main .container {
+        margin-bottom: 20px;
+    }
+
+    main form {
+        display: flex;
+        flex-direction: column;
+
+
+        color: var(--text-base);
+    }
+
+    main form label {
+        margin-bottom: 5px;
+    }
+
+    main form input {
+        width: 335px;
+        height: 44px;
+        margin-bottom: 20px;
+        padding-left: 37px;
+
+        background-color: var(--background);
+        color: var(--text-base);
+
+        border: 1px solid #868686;
+        border-radius: 4px;
+    }
+
+    main form input[type=email] {
+        background: url(./images/mail.svg) no-repeat left 12px center;
+    }
+
+    main form input[type=password] {
+        background: url(./images/lock.svg) no-repeat left 12px center;
+    }
+
+    main form .line-checkbox {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    main form .line-checkbox p a {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 21px;
+        text-decoration: none;
+
+        color: var(--primary-color);
+    }
+
+    main form .remember {
+        position: relative;
+        padding-left: 30px;
+        padding: auto 0;
+
+    }
+
+    main form .remember input[type=checkbox] {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    main form .checkmark {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 0;
+        left: 0;
+        border: 1px solid #868686;
+        border-radius: 4px;
+    }
+
+    main form .remember input:checked~.checkmark {
+        background-color: var(--primary-color);
+        border: none;
+    }
+
+    .remember .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+        left: 6px;
+        top: 2px;
+        width: 5px;
+        height: 10px;
+        border: solid var(--form-background);
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-trasform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    .remember input:checked~.checkmark:after {
+        content: "";
+        display: block;
+    }
+
+    main form button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 334px;
+        height: 51px;
+        margin-bottom: 15px;
+
+        background: var(--primary-color);
+        border: 0;
+        border-radius: 4px;
+
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+
+        letter-spacing: 0.015em;
+        text-transform: uppercase;
+
+        color: #473404;
+    }
+
+    main form div:last-child p {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        text-align: center;
+        line-height: 21px;
+
+        color: #FFC632;
+    }
+
+    main form div:last-child a {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 21px;
+        text-decoration: none;
+
+        color: #FFC632;
+    }
+
+    .side{
+        width: 50vw;
+
+        display: flex;
+        justify-content: flex-end;
+        
+    }
+    
+}
+
+@media (max-width: 1440px){
+    body{
+        display: flex;
+        background-color: var(--background);
+
+        
+    }
+
+    .wrap{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 50vw;
+
+        position: relative;
+    }
+
+    header {
+        width: 572px;
+
+        display: flex;
+        justify-content: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        background-color: var(--form-background);
+    }
+
+
+    header .container {
+        width: 335px;
+    }
+
+    header figure {
+        top: 40px;
+        left: 40px;
+
+        position: absolute;
+        margin-bottom: 36px;
+    }
+
+    header div:nth-child(2) {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+        color: var(--text-title);
+    }
+
+    header p {
+        color: var(--text-base);
+    }
+
+    main {
+        width: 572px;
+
+        display: flex;
+        justify-content: center;
+        background: var(--form-background);
+
+    }
+
+    main .container {
+        margin-bottom: 20px;
+    }
+
+    main form {
+        display: flex;
+        flex-direction: column;
+
+
+        color: var(--text-base);
+    }
+
+    main form label {
+        margin-bottom: 5px;
+    }
+
+    main form input {
+        width: 335px;
+        height: 44px;
+        margin-bottom: 20px;
+        padding-left: 37px;
+
+        background-color: var(--background);
+        color: var(--text-base);
+
+        border: 1px solid #868686;
+        border-radius: 4px;
+    }
+
+    main form input[type=email] {
+        background: url(./images/mail.svg) no-repeat left 12px center;
+    }
+
+    main form input[type=password] {
+        background: url(./images/lock.svg) no-repeat left 12px center;
+    }
+
+    main form .line-checkbox {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    main form .line-checkbox p a {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 21px;
+        text-decoration: none;
+
+        color: var(--primary-color);
+    }
+
+    main form .remember {
+        position: relative;
+        padding-left: 30px;
+        padding: auto 0;
+
+    }
+
+    main form .remember input[type=checkbox] {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    main form .checkmark {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 0;
+        left: 0;
+        border: 1px solid #868686;
+        border-radius: 4px;
+    }
+
+    main form .remember input:checked~.checkmark {
+        background-color: var(--primary-color);
+        border: none;
+    }
+
+    .remember .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+        left: 6px;
+        top: 2px;
+        width: 5px;
+        height: 10px;
+        border: solid var(--form-background);
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-trasform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    .remember input:checked~.checkmark:after {
+        content: "";
+        display: block;
+    }
+
+    main form button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 334px;
+        height: 51px;
+        margin-bottom: 15px;
+
+        background: var(--primary-color);
+        border: 0;
+        border-radius: 4px;
+
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+
+        letter-spacing: 0.015em;
+        text-transform: uppercase;
+
+        color: #473404;
+    }
+
+    main form div:last-child p {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        text-align: center;
+        line-height: 21px;
+
+        color: #FFC632;
+    }
+
+    main form div:last-child a {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 21px;
+        text-decoration: none;
+
+        color: #FFC632;
+    }
+
+    .side{
+        flex: 1;
+
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    
+}
+
+
+/*inicio da configuração de resolu~]ao para tablets*/
+
+
+@media (max-width: 1155px){
     body {
         width: 100vw;
         height: 100vh;
@@ -43,7 +498,7 @@ body {
     header {
         display: flex;
         justify-content: center;
-        margin-bottom: 30px;
+        padding-bottom: 30px;
     }
 
 
@@ -53,6 +508,7 @@ body {
 
     header figure {
         margin-bottom: 36px;
+        position: fixed;
     }
 
     header div:nth-child(2) {
@@ -231,34 +687,38 @@ body {
     body {
         display: flex;
         justify-content: center;
-        height: auto;
-
+        align-items: flex-start;
         background: var(--background);
     }
 
     .wrap {
-        padding-top: 40px;
         width: 335px;
         background-color: var(--background);
+        position: initial;
     }
 
     header {
-        margin-bottom: 30px;
+        margin-top: 40px;
+        padding-bottom: 30px;
+        width: auto;
+        background-color: var(--background);
     }
 
 
     header .container {
-        margin-bottom: 27px;
+        padding-bottom: 27px;
     }
 
     header figure {
-        margin-bottom: 36px;
+        margin-bottom: 0;
+        padding-bottom: 36px;
+        position: initial;
     }
 
     header div:nth-child(2) {
         display: flex;
         gap: 10px;
-        margin-bottom: 10px;
+        padding-bottom: 10px;
         color: var(--text-title);
     }
 
@@ -269,6 +729,8 @@ body {
     main {
         display: flex;
         justify-content: center;
+        width: auto;
+        background-color: var(--background);
 
     }
 
